@@ -150,22 +150,20 @@ The pipeline supports incremental upserts using Delta Lake `MERGE`, so rerunning
 
 ## Incremental Processing
 
-The platform supports incremental data loading by year.
+This pipeline supports **two run modes**:
+
+- **Full Load**: processes **all years** (rebuilds tables)
+- **Incremental Load**: processes **one specific year** (Delta `MERGE` upserts)
 
 ### Full Load (All Years)
 
-```python
-# Airflow DAG config Trigger
-RUN_MODE = "full"
-PROCESS_YEAR = ""  # Empty for all years
-```
+Trigger Airflow with:
 
-### Incremental Load (Specific Year)
-
-```python
-# Airflow DAG config Trigger
-RUN_MODE = "incremental"
-PROCESS_YEAR = "2025"  # Only process 2025
+```json
+{
+  "run_mode": "incremental",
+  "process_year": "2025"
+}
 ```
 
 ### How It Works
@@ -181,3 +179,10 @@ PROCESS_YEAR = "2025"  # Only process 2025
 ![](./images/dashboard_2.png)
 ![](./images/dashboard_3.png)
 ![](./images/dashboard_4.png)
+
+## Contact
+
+If you have questions, run into issues, or want help understanding any part of the pipeline, feel free to reach out:
+
+- LinkedIn: https://www.linkedin.com/in/thenischald
+- Portfolio: https://nischaldinesh.com
