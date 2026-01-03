@@ -173,7 +173,7 @@ Trigger Airflow with:
 3. **Silver/Gold** merge new data using Delta Lake MERGE
 4. **Dashboard** auto updates (views query live tables)
 
-### Analytics Dashboard
+## Analytics Dashboard
 
 ![](./images/dashboard_1.png)
 ![](./images/dashboard_2.png)
