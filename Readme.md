@@ -4,7 +4,7 @@
 
 This repo contains a data pipeline that ingests Ironman race results from AWS RDS (PostgreSQL), lands raw CSV files in S3, processes them in Databricks using a Medallion (Bronze/Silver/Gold) architecture, and powers a dynamic analytics dashboard that automatically updates when new year data is processed.
 
-The pipeline supports incremental upserts using Delta Lake `MERGE`, so rerunning a year does not duplicate rows.
+The pipeline supports incremental upserts using Delta Lake `MERGE` (idempotent reruns). Gold dimensions follow SCD Type 1 behavior (latest attributes overwrite previous values), while the fact table is upserted by row_key to prevent duplicates.
 
 ![Architecture Diagram](./images/ironman_pipeline_architecture.png)
 
