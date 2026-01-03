@@ -1,6 +1,4 @@
-# Ironman Race Analytics Platform
-
-**End to End Data Pipeline Architecture with Incremental Processing**
+# Ironman Triathlon Analytics Platform
 
 ## Overview
 
