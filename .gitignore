@@ -1,0 +1,35 @@
+# --- Python / virtual envs ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Python cache ---
+__pycache__/
+*.py[cod]
+*.pyo
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Airflow common files ---
+airflow.cfg
+airflow-webserver.pid
+logs/
+
+# --- Secrets / env files ---
+.env
+*.env
+.env.*
+*.pem
+*.key
+
+# --- OS / IDE ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Build / dist ---
+build/
+dist/
+*.egg-info/
